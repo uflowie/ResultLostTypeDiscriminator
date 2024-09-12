@@ -21,6 +21,13 @@ namespace ResultLostTypeDiscriminator.Controllers
         {
             return new Foo();
         }
+
+
+        [HttpGet("actionresult")]
+        public ActionResult<BaseFoo> GetFooActionResult()
+        {
+            return new Foo();
+        }
     }
 
     [JsonDerivedType(typeof(Foo), nameof(Foo))]
